@@ -50,7 +50,7 @@ public class LoginController {
 				request.setAttribute("userLogin" , user);
 			}
 		} catch (ApplicationException e) {
-			// TODO Auto-generated catch block
+			
 			e.printStackTrace();
 		}
 		

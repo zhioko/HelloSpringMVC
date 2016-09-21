@@ -8,7 +8,7 @@
 </head>
 <body>
 
-	<h1>Add User Pagesssssss</h1>
+	<h1>Add User Pages</h1>
 	
 	<form method="post" id="studentForm" action="/spring/user/addUser.do">
 	<label>First Name</label>

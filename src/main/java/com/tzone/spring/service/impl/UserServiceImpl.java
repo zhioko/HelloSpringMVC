@@ -19,10 +19,13 @@ public class UserServiceImpl implements UserService {
 	
 	@Override
 	public void addUser(Student student) throws ApplicationException {
-		System.out.println("First name: " +student.getFirstname());
-		System.out.println("Last name: " +student.getLastname());
-		System.out.println("Phone: " +student.getPhone());
-		System.out.println("Salary: " +student.getSalary());
+		
+		studentDao.saveStudent(student);
+		
+//		System.out.println("First name: " +student.getFirstname());
+//		System.out.println("Last name: " +student.getLastname());
+//		System.out.println("Phone: " +student.getPhone());
+//		System.out.println("Salary: " +student.getSalary());
 		
 	}
 

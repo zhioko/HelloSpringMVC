@@ -2,12 +2,15 @@ package com.tzone.spring.service.impl;
 
 import java.util.List;
 
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import com.tzone.spring.dao.StudentDao;
 import com.tzone.spring.entity.Student;
 import com.tzone.spring.service.StudentService;
+
+
 @Service("StudentSpringService")
 public class StudentServiceImpl implements StudentService{
 	
@@ -23,14 +26,16 @@ public class StudentServiceImpl implements StudentService{
 
 	@Override
 	public void saveStudent(Student student) {
-		// TODO Auto-generated method stub
+		
+		studentDao.saveStudent(student);
 		
 	}
 
 	@Override
 	public void deleteStudent(int id) {
-		// TODO Auto-generated method stub
 		
+		Student student = studentDao.findById(id);
+		studentDao.deleteStudent(student);
 	}
 
 }

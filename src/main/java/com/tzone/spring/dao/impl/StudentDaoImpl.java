@@ -1,5 +1,6 @@
 package com.tzone.spring.dao.impl;
 
+import java.io.Serializable;
 import java.util.List;
 
 import org.hibernate.SessionFactory;
@@ -38,9 +39,28 @@ public class StudentDaoImpl implements StudentDao{
 	@Override
 	 @Transactional
 	public void saveStudent(Student student) {
+		
 		sessionFactory.getCurrentSession().saveOrUpdate(student);
 		
 	}
+
+
+	@Override
+	public void deleteStudent(Student student) {
+		
+		sessionFactory.getCurrentSession().delete(student);
+		
+	}
+
+
+	@Override
+	public Student findById(int id) {
+		
+		Student student = (Student) sessionFactory.getCurrentSession().get(Student.class, id);
+		
+		return student;
+	}
+
 
 
 
